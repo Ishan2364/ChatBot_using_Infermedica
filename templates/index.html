@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Health Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>Health AI</span>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><i class="fas fa-comment-medical"></i> Chat</li>
+                    <li><i class="fas fa-history"></i> History</li>
+                    <li><i class="fas fa-user-md"></i> Profile</li>
+                    <li><i class="fas fa-info-circle"></i> About</li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>© 2025 Health AI</p>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <header>
+                <h1>AI Health Assistant</h1>
+                <div class="user-menu">
+                    <span id="username">Guest</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </header>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be inserted here -->
+                </div>
+                
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Type your message here...">
+                    <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <div class="info-header">
+                <h2>Medical Information</h2>
+                <button class="close-info"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="history">Medical History</div>
+                <div class="tab" data-tab="diagnoses">Past Diagnoses</div>
+            </div>
+            
+            <div class="tab-content">
+                <div class="tab-pane active" id="history-pane">
+                    <h3>Chronic Conditions</h3>
+                    <ul id="chronic-conditions-list">
+                        <li>None recorded</li>
+                    </ul>
+                    
+                    <h3>Allergies</h3>
+                    <ul id="allergies-list">
+                        <li>None recorded</li>
+                    </ul>
+                    
+                    <h3>Current Medications</h3>
+                    <ul id="medications-list">
+                        <li>None recorded</li>
+                    </ul>
+                    
+                    <h3>Previous Surgeries</h3>
+                    <ul id="surgeries-list">
+                        <li>None recorded</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-pane" id="diagnoses-pane">
+                    <p>No previous diagnoses found.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
